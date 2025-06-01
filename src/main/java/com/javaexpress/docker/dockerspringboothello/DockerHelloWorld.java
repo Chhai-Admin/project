@@ -20,12 +20,7 @@ public class DockerHelloWorld {
 
     @GetMapping
     public String getName() {
-        return Arrays.asList(
-            "Welcome to DevOps Level 1",
-            "Final Project Demo",
-            "Welcome to Project Demo about Spring Boot"
-        );
-
+        return "Welcome to Project Demo about Spring Boot";
     }
 
     // Health check endpoint
@@ -57,12 +52,12 @@ public class DockerHelloWorld {
 
     // About endpoint: static info
     @GetMapping("/about")
-    public Map<String, String> about() {
-        Map<String, String> about = new HashMap<>();
-        about.put("project", "Spring Boot Docker Demo");
-        about.put("version", "1.0.0");
-        about.put("author", "Kemchhai Bong & JavaExpress");
-        return about;
+    public List<String> about() {
+        return Arrays.asList(
+            "Welcome to DevOps Level 1",
+            "Final Project Demo",
+            "Welcome to Project Demo about Spring Boot"
+        );
     }
 }
 
