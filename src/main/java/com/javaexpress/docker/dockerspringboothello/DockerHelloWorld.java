@@ -18,7 +18,12 @@ public class DockerHelloWorld {
 
     @GetMapping
     public String getName() {
-        return "Welcome to deployment in docker";
+        return Arrays.asList(
+            "Welcome to DevOps Level 1",
+            "Final Project Demo",
+            "Welcome to Project Demo about Spring Boot"
+        );
+
     }
 
     // Health check endpoint
