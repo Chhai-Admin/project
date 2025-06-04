@@ -47,7 +47,7 @@ pipeline {
         }
         stage('Deploy to Docker Swarm') {
             steps {
-                sshagent(credentials: ['SwarmSSHKey']) {
+                sshagent(credentials: ['root']) {
                     sh """
                         scp -o StrictHostKeyChecking=no docker-compose.deploy.yml ${REMOTE_USER}@${REMOTE_HOST}:/tmp/docker-compose.yml
                         ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${REMOTE_HOST} \\
