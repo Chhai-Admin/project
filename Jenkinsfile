@@ -5,8 +5,8 @@ pipeline {
     }
     environment {
         DOCKER_IMAGE = "kemchhai093/docker_jenkins_springboot:${BUILD_NUMBER}"
-        REMOTE_HOST = "your.swarm.manager.ip"
-        REMOTE_USER = "remote_user"
+        REMOTE_HOST = "192.168.64.6"
+        REMOTE_USER = "root"
         STACK_NAME = "springbootstack"
     }
     stages {
